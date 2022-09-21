@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Calculadora</title>
+</head>
+<body>
+	<form action="calculadora.jsp">
+		<p>Operando 1: <input type="number" name="operand1" step="0.01" required></p>
+		<p>Operando 2: <input type="number" name="operand2" step="0.01" required></p>
+		
+		<p>Tipo de operación:
+			<select name="calculator">
+				<option>Sumar</option>
+				<option>Restar</option>
+				<option>Multiplicar</option>
+				<option>Dividir</option>
+			</select>
+		</p>
+		<p><input type="submit" value="Calcular"></p>
+	</form>
+</body>
+</html>
