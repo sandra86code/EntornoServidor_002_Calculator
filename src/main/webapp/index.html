@@ -3,21 +3,52 @@
 <head>
 <meta charset="UTF-8">
 <title>Calculadora</title>
+<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-	<form action="calculadora.jsp">
-		<p>Operando 1: <input type="number" name="operand1" step="0.01" required></p>
-		<p>Operando 2: <input type="number" name="operand2" step="0.01" required></p>
-		
-		<p>Tipo de operación:
-			<select name="calculator">
-				<option>Sumar</option>
-				<option>Restar</option>
-				<option>Multiplicar</option>
-				<option>Dividir</option>
-			</select>
-		</p>
-		<p><input type="submit" value="Calcular"></p>
-	</form>
+	<div class="login-root">
+    <div class="box-root flex-flex flex-direction--column" style="min-height: 100vh;flex-grow: 1;">
+      <div class="box-root padding-top--24 flex-flex flex-direction--column" style="flex-grow: 1; z-index: 9;">
+        <div class="box-root padding-top--48 padding-bottom--24 flex-flex flex-justifyContent--center">
+          <h1><a href="index.html" rel="dofollow">Mi calculadora</a></h1>
+        </div>
+        <div class="formbg-outer">
+          <div class="formbg">
+            <div class="formbg-inner padding-horizontal--48">
+              <form id="stripe-login" action="calculadora.jsp">
+                <div class="field padding-bottom--24">
+                  <label for="operand1">Número 1</label>
+                  <input type="number" name="operand1" step="0.01" required>
+                </div>
+                <div class="field padding-bottom--24">
+                  <label for="operand2">Número 2</label>
+                  <input type="number" name="operand2" step="0.01" required>
+                </div>
+				<div class="field padding-bottom--24">
+					<label for="calculator">Tipo de operación</label>
+					<select name="calculator" class="select-css">
+						<option>Sumar</option>
+						<option>Restar</option>
+						<option>Multiplicar</option>
+						<option>Dividir</option>
+					</select>
+				</div>
+				<div class="field padding-bottom--24">
+                  <input type="submit" value="Calcular">
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="footer-link padding-top--24">
+            <div class="listing padding-top--24 padding-bottom--24 flex-flex center-center">
+              <span><a href="index.html">© MiCalculadora</a></span>
+              <span><a href="#">Contacto</a></span>
+              <span><a href="#">Privacidad y Términos de uso</a></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </body>
 </html>

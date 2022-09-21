@@ -31,7 +31,7 @@ public class Arithmetic {
 	}
 	
 	public double multiplication() {
-		return this.getOperand1()*this.getOperand2();
+		return Math.round((this.getOperand1()*this.getOperand2())*100.0)/100.0;
 	}
 	
 	public double division() throws ArithmeticException {
