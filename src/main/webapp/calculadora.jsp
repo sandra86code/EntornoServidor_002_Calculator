@@ -12,15 +12,16 @@
 <body>
 
 	<% 
-	Arithmetic numbers = new Arithmetic(Double.parseDouble(request.getParameter("operand1")), Double.parseDouble(request.getParameter("operand2")));
-	String operacion = request.getParameter("calculator");
-	
 	double result = 0.0;
-	if(operacion.equalsIgnoreCase("sumar")) {
+	
+	Arithmetic numbers = new Arithmetic(Double.parseDouble(request.getParameter("operand1")), Double.parseDouble(request.getParameter("operand2")));
+	String operacion = request.getParameter("submit");
+	
+	if(operacion!=null && operacion.equals("+")) {
 		result = numbers.addition();
-	}else if(operacion.equalsIgnoreCase("restar")) {
+	}else if(operacion!=null && operacion.equals("-")) {
 		result = numbers.substraction();
-	}else if(operacion.equalsIgnoreCase("multiplicar")) {
+	}else if(operacion!=null && operacion.equals("*")) {
 		result = numbers.multiplication();
 	}else {
 		try {
